@@ -4,6 +4,7 @@ import React from "react";
 import "./ConstraintForm.css";
 
 const ConstraintForm = ({ constraints, setConstraints, ingredients }) => {
+  // Function to add a new constraint to the list of constraints
   const handleAddConstraint = () => {
     setConstraints([
       ...constraints,
@@ -11,28 +12,31 @@ const ConstraintForm = ({ constraints, setConstraints, ingredients }) => {
     ]);
   };
 
+  // Function to handle the change in a specific field of a constraint
   const handleChange = (index, field, value) => {
-    const updated = [...constraints];
+    const updated = [...constraints]; // Create a copy of the current constraints array
     if (field === "allow_deviation") {
-      updated[index][field] = value;
+      updated[index][field] = value; // Update 'allow_deviation' field
     } else if (field === "right") {
-      updated[index][field] = parseFloat(value) || 0;
+      updated[index][field] = parseFloat(value) || 0; // Ensure 'right' is a valid number
     } else {
-      updated[index][field] = value;
+      updated[index][field] = value; // Update other fields
     }
-    setConstraints(updated);
+    setConstraints(updated); // Update state with modified constraints
   };
 
+  // Function to remove a constraint at a specific index
   const handleRemoveConstraint = (index) => {
     const updatedConstraints = [...constraints];
-    updatedConstraints.splice(index, 1);
-    setConstraints(updatedConstraints);
+    updatedConstraints.splice(index, 1); // Remove the constraint at the given index
+    setConstraints(updatedConstraints); //Update the constraints state
   };
 
   return (
     <div className="constraint-form">
       <h3 className="section-title">Additional Constraints</h3>
 
+      {/* Iterate over the list of constraints and render each one */}
       {constraints.map((constraint, index) => (
         <div key={index} className="constraint-card">
           <div className="constraint-header">
@@ -69,6 +73,7 @@ const ConstraintForm = ({ constraints, setConstraints, ingredients }) => {
             </button>
           </div>
 
+          {/* Dropdown to select the ingredient or field to apply the constraint */}
           <div className="form-group">
             <select
               value={constraint.left}
@@ -86,6 +91,7 @@ const ConstraintForm = ({ constraints, setConstraints, ingredients }) => {
             </select>
           </div>
 
+          {/* Dropdown to select the operator (>, <=, =) */}
           <div className="form-group">
             <select
               value={constraint.op}
@@ -97,6 +103,7 @@ const ConstraintForm = ({ constraints, setConstraints, ingredients }) => {
             </select>
           </div>
 
+          {/* Input for the right-hand side of the constraint */}
           <div className="form-group">
             <input
               type="number"
@@ -107,6 +114,7 @@ const ConstraintForm = ({ constraints, setConstraints, ingredients }) => {
             />
           </div>
 
+          {/* Checkbox to allow deviation from the constraint */}
           <div className="form-group checkbox-group">
             <label>
               <input
@@ -124,6 +132,7 @@ const ConstraintForm = ({ constraints, setConstraints, ingredients }) => {
         </div>
       ))}
 
+      {/* Button to add a new constraint */}
       <div className="add-constraint-wrapper">
         <button
           type="button"

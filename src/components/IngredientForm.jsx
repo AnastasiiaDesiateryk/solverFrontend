@@ -1,32 +1,44 @@
 import React from "react";
 import "./IngredientForm.css";
 
+// IngredientForm component handles the dynamic addition, removal, and updating of ingredients
+// within the recipe optimization tool. It allows users to add multiple ingredients
+// and input their properties (name, price, and calories).
+
 const IngredientForm = ({ ingredients, setIngredients }) => {
+  // Function to add a new empty ingredient to the list
   const handleAddIngredient = () => {
     setIngredients([...ingredients, { name: "", price: "", calories: "" }]);
   };
 
+  // Function to handle changes to any ingredient's properties (name, price, or calories)
   const handleChange = (index, field, value) => {
-    const updated = [...ingredients];
-    updated[index][field] = field === "name" ? value : parseFloat(value) || 0;
-    setIngredients(updated);
+    const updated = [...ingredients]; // Copy the existing ingredients array
+    updated[index][field] = field === "name" ? value : parseFloat(value) || 0; // Parse numbers where needed
+    setIngredients(updated); // Update the ingredients state with the modified list
   };
+
+  // Function to remove an ingredient at a specific index
   const handleRemoveIngredient = (index) => {
-    const updated = [...ingredients];
-    updated.splice(index, 1);
-    setIngredients(updated);
+    const updated = [...ingredients]; // Copy the ingredients array
+    updated.splice(index, 1); // Remove the ingredient at the specified index
+    setIngredients(updated); // Update the ingredients state with the modified list
   };
 
   return (
     <div className="ingredient-form">
       <h3 className="section-title">Ingredients</h3>
+
+      {/* Map through the list of ingredients to render each ingredient's input fields */}
       {ingredients.map((ingredient, index) => (
         <div key={index} className="ingredient-card">
           <div className="ingredient-header">
+            {/* Display ingredient title with dynamic alphabet-based naming */}
             <h4 className="ingredient-title">
               Ingredient {String.fromCharCode(65 + index)}
             </h4>
 
+            {/* Remove button to delete the specific ingredient */}
             <button
               type="button"
               className="remove-button"
@@ -58,6 +70,7 @@ const IngredientForm = ({ ingredients, setIngredients }) => {
             </button>
           </div>
 
+          {/* Input field for ingredient name */}
           <div className="form-group">
             <label>Name:</label>
             <input
@@ -68,6 +81,7 @@ const IngredientForm = ({ ingredients, setIngredients }) => {
             />
           </div>
 
+          {/* Input field for ingredient price per gram */}
           <div className="form-group">
             <label>Price (CHF/g):</label>
             <input
@@ -79,6 +93,7 @@ const IngredientForm = ({ ingredients, setIngredients }) => {
             />
           </div>
 
+          {/* Input field for ingredient calories per gram */}
           <div className="form-group">
             <label>Calories (per g):</label>
             <input
@@ -91,6 +106,8 @@ const IngredientForm = ({ ingredients, setIngredients }) => {
           </div>
         </div>
       ))}
+
+      {/* Button to add a new ingredient */}
       <div className="add-ingredient-wrapper">
         <button
           type="button"

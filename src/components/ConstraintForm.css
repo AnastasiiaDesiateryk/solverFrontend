@@ -11,7 +11,7 @@
 
 .constraint-header {
   display: flex;
-  justify-content: flex-end; /* ПРИЖАТЬ всё что есть вправо */
+  justify-content: flex-end;
   margin-bottom: 0.5rem;
 }
 

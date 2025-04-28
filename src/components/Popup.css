@@ -14,17 +14,17 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-align: left;
-  color: #212121; /* Мягкий красивый фиолетовый */
+  color: #212121;
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.02em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Лёгкая тень для премиальности */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .popup-container h3 {
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0.75rem 0 0.5rem;
-  color: #ff5722; /* Мягкий оранжевый акцент */
+  color: #ff5722;
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.02em;
 }
@@ -48,11 +48,11 @@
 }
 
 .popup-container input::placeholder {
-  color: #aaa; /* Серый placeholder */
+  color: #aaa;
 }
 
 .popup-container select:invalid {
-  color: #aaa; /* Если ничего не выбрано - серым */
+  color: #aaa;
 }
 
 .popup-container input:focus,

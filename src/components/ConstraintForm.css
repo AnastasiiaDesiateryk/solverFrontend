@@ -1,0 +1,97 @@
+.constraint-form {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.constraint-header {
+  display: flex;
+  justify-content: flex-end; /* ПРИЖАТЬ всё что есть вправо */
+  margin-bottom: 0.5rem;
+}
+
+.constraint-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.constraint-card {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 0.75rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 0.625rem;
+  font-size: 0.875rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  border-color: #ff5722;
+  background: #fff;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #ff5722;
+}
+
+.add-constraint-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.add-constraint-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.add-constraint-button:hover {
+  background-color: #43a047;
+}

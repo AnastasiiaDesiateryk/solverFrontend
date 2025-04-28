@@ -1,0 +1,113 @@
+.popup-container {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  width: 20rem; /* 320px */
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; /* 14px */
+  color: #333;
+}
+
+.popup-container h2 {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  color: #212121; /* Мягкий красивый фиолетовый */
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Лёгкая тень для премиальности */
+}
+
+.popup-container h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.75rem 0 0.5rem;
+  color: #ff5722; /* Мягкий оранжевый акцент */
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.popup-container input,
+.popup-container select {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: #f9f9f9;
+  font-size: 0.875rem;
+  color: #49575a;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.popup-container input::placeholder {
+  color: #aaa; /* Серый placeholder */
+}
+
+.popup-container select:invalid {
+  color: #aaa; /* Если ничего не выбрано - серым */
+}
+
+.popup-container input:focus,
+.popup-container select:focus {
+  border-color: #ff5722;
+  background: #fff;
+}
+
+.popup-container button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ff5722;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.75rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.popup-container button:hover {
+  background-color: #e64a19;
+}
+
+.popup-container .small-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #ff5722;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.popup-container .add-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ff5722;
+  vertical-align: middle;
+}
+.popup-container label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #666;
+  display: block;
+  margin-bottom: 0.25rem;
+}
